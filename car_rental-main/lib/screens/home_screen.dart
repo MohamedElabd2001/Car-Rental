@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),
                 ),
               ),
-             /* Text(
+              Text(
                 "Choose the Car Model",
                 style: AppTextStyle.maintitleStyle,
               ),
@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(height: 12,),
               search_bar(),
               SizedBox(height: 20,),
-              Text("Latest Model",style: AppTextStyle.maintitleStyle,),*/
+              Text("Latest Model",style: AppTextStyle.maintitleStyle,),
               SizedBox(height: 20,),
               Column(
                 children: cars_list.map((e) => car_card(e, context)).toList(),
@@ -82,7 +82,7 @@ List <CarsModel> cars_list = [
     cars_model: "ayhag",
     carColor: CarColor(carsColor: Colors.blue,colorName: "Blue"),
     price: "100 \$/Day",
-    speed: 100,
+    speed: 200,
     horse_power: 100,
     type: "automatic",
   ),
