@@ -1,3 +1,4 @@
+import 'package:car_rental/Calendar/calendar.dart';
 import 'package:car_rental/Widgets/cars_details.dart';
 import 'package:car_rental/style/color.dart';
 import 'package:car_rental/style/text_style.dart';
@@ -100,7 +101,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         ),
                       ],
                     ),
-
                   ],
                 ),
               ),
@@ -112,7 +112,13 @@ class _DetailsScreenState extends State<DetailsScreen> {
                     width: double.infinity,
                     height: 60,
                     child: RawMaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => Calendar(title: "Calendar", model: widget.model,),
+                          ),
+                        );
+                      },
                       child: Text(
                         "Rent Now",
                         style: TextStyle(
